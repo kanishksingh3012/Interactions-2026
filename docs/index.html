@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>14 Days of Interactions</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: #17150f;
+    color: #f2ede2;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    padding: 72px 24px 96px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: #8a7d5f;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 40px;
+    letter-spacing: -.015em;
+    margin: 0 0 12px;
+  }
+  .sub {
+    color: #8a7d5f;
+    font-size: 15px;
+    line-height: 1.65;
+    max-width: 540px;
+    margin: 0 0 48px;
+  }
+  .sub code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    background: rgba(255, 255, 255, .06);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #d9a441;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 14px;
+  }
+  .card {
+    display: block;
+    padding: 20px;
+    background: rgba(255, 255, 255, .03);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 14px;
+    text-decoration: none;
+    color: inherit;
+    transition: background .2s ease, border-color .2s ease, transform .2s ease;
+  }
+  .card:hover {
+    background: rgba(255, 255, 255, .06);
+    border-color: rgba(217, 164, 65, .4);
+    transform: translateY(-2px);
+  }
+  .card-day {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #d9a441;
+    margin-bottom: 10px;
+  }
+  .card-title {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .card.placeholder {
+    color: #5c5340;
+    border-style: dashed;
+    cursor: default;
+  }
+  .card.placeholder .card-day { color: #6b6247; }
+  .card.placeholder:hover {
+    transform: none;
+    background: rgba(255, 255, 255, .03);
+    border-color: rgba(255, 255, 255, .08);
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">14 Days · Interaction Challenge</div>
+    <h1>Daily interactions</h1>
+    <p class="sub">One interaction, designed and shipped every day for two weeks. Vanilla HTML/CSS/JS + GSAP, no build step. Clean source for each lives in <code>/interactions</code>.</p>
+    <div class="grid" id="grid"></div>
+  </div>
+
+<script>
+  // Add each finished day here — the grid below fills in "coming soon"
+  // placeholders for the rest automatically.
+  const days = [
+    { day: 1, title: 'Magnetic Button', slug: 'day-01-magnetic' },
+  ];
+
+  const TOTAL_DAYS = 14;
+  const grid = document.getElementById('grid');
+
+  for (let i = 1; i <= TOTAL_DAYS; i++) {
+    const entry = days.find(d => d.day === i);
+    const card = document.createElement(entry ? 'a' : 'div');
+    card.className = 'card' + (entry ? '' : ' placeholder');
+    if (entry) card.href = `./${entry.slug}/demo.html`;
+    card.innerHTML = `
+      <div class="card-day">Day ${String(i).padStart(2, '0')}</div>
+      <div class="card-title">${entry ? entry.title : 'Coming soon'}</div>
+    `;
+    grid.appendChild(card);
+  }
+</script>
+</body>
+</html>
