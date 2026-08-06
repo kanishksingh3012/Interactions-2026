@@ -1,6 +1,6 @@
 # 14 Days of Interactions
 
-A two-week challenge: one interaction, designed and shipped every day. Vanilla HTML/CSS/JS with GSAP — no build step, no framework.
+A two-week challenge: one interaction, designed and shipped every day. Vanilla HTML/CSS/JS — no build step, no framework. GSAP where it's the right tool, native Web Animations API where it isn't.
 
 **Live gallery:** `https://kanishksingh3012.github.io/Interactions-2026/` — enable it under Settings → Pages → Deploy from a branch → `main` / `/docs`.
 
@@ -16,3 +16,4 @@ Source and demo intentionally duplicate the interaction's code rather than shari
 | Day | Interaction | Source | Demo |
 |---|---|---|---|
 | 01 | Magnetic Button | [source](interactions/day-01-magnetic/source-code.html) | [demo](https://kanishksingh3012.github.io/Interactions-2026/day-01-magnetic/demo.html) |
+| 02 | Dots with Labels | [source](interactions/day-02-pagination-dots/source-code.html) | [demo](https://kanishksingh3012.github.io/Interactions-2026/day-02-pagination-dots/demo.html) |
