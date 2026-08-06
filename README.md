@@ -16,4 +16,4 @@ Source and demo intentionally duplicate the interaction's code rather than shari
 | Day | Interaction | Source | Demo |
 |---|---|---|---|
 | 01 | Magnetic Button | [source](interactions/day-01-magnetic/source-code.html) | [demo](https://kanishksingh3012.github.io/Interactions-2026/day-01-magnetic/demo.html) |
-| 02 | Dots with Labels | [source](interactions/day-02-pagination-dots/source-code.html) | [demo](https://kanishksingh3012.github.io/Interactions-2026/day-02-pagination-dots/demo.html) |
+| 02 | Spring Pagination | [source](interactions/day-02-spring-pagination/source-code.html) | [demo](https://kanishksingh3012.github.io/Interactions-2026/day-02-spring-pagination/demo.html) |
